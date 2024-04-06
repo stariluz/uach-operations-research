@@ -25,13 +25,13 @@ $R_5 \to x_1, x_2, s_1, s_2, s_3, s_4 \geq 2$
 
 1. Vaciamos las variables básicas en una tabla. Para el punto $A$ sabemos que $(x_1,x_2)=(0,0)$ por lo que $s_1, s_2, s_3, s_4$ son nuestras variables básicas.
 
-| Variables básicas | Z   | x_1             | x_2             | s_1            | s_2             | s_3             | s_4             | Solucion         |
-| ----------------- | --- | --------------- | --------------- | -------------- | --------------- | --------------- | --------------- | ---------------- |
-| Z     | 1 | -5    | -4    | 0 | 0 | 0 | 0 | 0     |
-| s_1   | 0 | 6     | 4     | 1 | 0 | 0 | 0 | 24    |
-| s_2   | 0 | 1     | 2     | 0 | 1 | 0 | 0 | 6     |
-| s_3   | 0 | -1    | 1     | 0 | 0 | 1 | 0 | 1     |
-| s_4   | 0 | 0     | 1     | 0 | 0 | 0 | 1 | 2     |
+| Variables básicas | Z   | x_1 | x_2 | s_1 | s_2 | s_3 | s_4 | Solucion |
+| ----------------- | --- | --- | --- | --- | --- | --- | --- | -------- |
+| Z                 | 1   | -5  | -4  | 0   | 0   | 0   | 0   | 0        |
+| s_1               | 0   | 6   | 4   | 1   | 0   | 0   | 0   | 24       |
+| s_2               | 0   | 1   | 2   | 0   | 1   | 0   | 0   | 6        |
+| s_3               | 0   | -1  | 1   | 0   | 0   | 1   | 0   | 1        |
+| s_4               | 0   | 0   | 1   | 0   | 0   | 0   | 1   | 2        |
 
 2. Seleccionar variable de entrada
 **¿Qué variable de mi función $Z$ afecta más a mi modelo?** $x_1$, entonces está será nuestra variable de entrada.
@@ -63,7 +63,7 @@ En nuestro ejemplo, $s_1$ será la fila pivote, por esto mismo, la variable bás
 | s_3               | 0   | -1              | 1             | 0             | 0               | 1               | 0               | 1                |
 | s_4               | 0   | 1               | 0             | 0             | 0               | 1               | 2               |                  |
 
-3. Actualizaremos el resto de la tabla con la formula
+4. Actualizaremos el resto de la tabla con la formula
 
 $\textrm{ Fila actual } -  \textrm{ (Coeficiente variable de entrada en la fila actual)(Fila pivote) }$
 
@@ -146,11 +146,11 @@ $\textrm{ Fila actual } -  \textrm{ (Coeficiente variable de entrada en la fila 
 
 ###### Actualizar $x_1$
 
-| Variables básicas            | Z   | x_1 | x_2               | s_1             | s_2           | s_3 | s_4 | Solucion      |
-| ---------------------------- | --- | --- | ----------------- | --------------- | ------------- | --- | --- | ------------- |
-| $x_1$                        | $0$ | $1$ | ==$\frac{4}{6}$== | $\frac{1}{6}$   | $0$           | $0$ | $0$ | $4$           |
-| $x_2$                        | $0$ | $0$ | $1$               | $\frac{-1}{8}$  | $\frac{3}{4}$ | $0$ | $0$ | $\frac{3}{2}$ |
-| $\frac{4}{6}(x_2)$           | $0$ | $0$ | $\frac{4}{6}$     | $\frac{-1}{12}$ | $\frac{1}{2}$ | $0$ | $0$ | $1$           |
+| Variables básicas            | Z   | x_1 | x_2               | s_1             | s_2            | s_3 | s_4 | Solucion      |
+| ---------------------------- | --- | --- | ----------------- | --------------- | -------------- | --- | --- | ------------- |
+| $x_1$                        | $0$ | $1$ | ==$\frac{4}{6}$== | $\frac{1}{6}$   | $0$            | $0$ | $0$ | $4$           |
+| $x_2$                        | $0$ | $0$ | $1$               | $\frac{-1}{8}$  | $\frac{3}{4}$  | $0$ | $0$ | $\frac{3}{2}$ |
+| $\frac{4}{6}(x_2)$           | $0$ | $0$ | $\frac{4}{6}$     | $\frac{-1}{12}$ | $\frac{1}{2}$  | $0$ | $0$ | $1$           |
 | $x_1=x_1-(\frac{4}{6}(x_2))$ | $0$ | $1$ | $0$               | $1/4$           | $\frac{-1}{2}$ | $0$ | $0$ | $3$           |
 
 ###### Actualizar $s_3$
