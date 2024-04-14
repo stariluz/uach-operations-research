@@ -29,11 +29,11 @@ $m=2, n=4$
 
 * Identificar variables básicas ($V_B$) y variables no básicas ($V_{NB}$)
 
-| ($V_B$) | $Z$ | x_1 | x_2 | s_1 | s_2 | Solución |
-| ------- | --- | --- | --- | --- | --- | -------- |
-| $Z$     | 1   | -2  | -3  | 0   | 0   | 0        |
-| $s_1$   | 0   | 2   | 1   | 1   | 0   | 4        |
-| $s_2$   | 0   | 1   | 2   | 0   | 1   | 5        |
+| ($V_B$) | $Z$ | $x_1$ | $x_2$ | $s_1$ | $s_2$ | $Solución$ |
+| ------- | --- | ----- | ----- | ----- | ----- | ---------- |
+| $Z$     | 1   | -2    | -3    | 0     | 0     | 0          |
+| $s_1$   | 0   | 2     | 1     | 1     | 0     | 4          |
+| $s_2$   | 0   | 1     | 2     | 0     | 1     | 5          |
 
 
 1. Nuestra variable de entrada será la variable que más afecta a Z (es un ejercicio de maximizar por lo que es el más negativo), es decir $x_2$, está será nuestra columna pivote.
