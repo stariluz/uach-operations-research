@@ -29,11 +29,13 @@ boards.forEach((board) => {
 
     canvas = convertToHDPICanvas(canvas, boardX, boardY, boardWidth, boardHeight);
 
+    const [beginX, beginY] = board.dataset.beginposition.split(',').map(value => Number(value));
+
     arrowsToDraw.forEach(
         (source) => {
             const [posX, posY] = source.dataset.arrowto.split(',').map(value => Number(value));
             // console.log(posX, posY);
-            const target = board.children[posX].children[posY].getElementsByClassName('value')[0];
+            const target = board.children[beginX+posX-1].children[beginY+posY-1].getElementsByClassName('value')[0];
             drawArrow(canvas, source, target, { boardX, boardY });
         }
     );

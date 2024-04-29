@@ -14,14 +14,6 @@
     <table>
         <thead>
             <tr>
-                <th colspan="2"></th>
-                <th colspan="4" style="text-align:center">
-                    Molino
-                </th>
-            </tr>
-            <tr>
-                <th>
-                </th>
                 <th>
                 </th>
                 <th>
@@ -34,28 +26,20 @@
                     3
                 </th>
                 <th>
-                    4
-                </th>
-                <th>
                     Oferta
                 </th>
             </tr>
         </thead>
-        <tbody class="board-js" id="board-1" data-beginposition="1,1">
-            <tr class="row-header">
-                <th rowspan="4">
-                    Silo
-                </th>
-            </tr>
+        <tbody class="board-js" id="board-1" data-beginposition="0,1">
             <tr>
-                <th>
+                <th class="row-index">
                     1
                 </th>
                 <td>
                     <table class="celd">
                         <tbody>
                             <tr>
-                                <td class="cost">10</td>
+                                <td class="cost">$0</td>
                             </tr>
 
                             <tr>
@@ -68,11 +52,11 @@
                     <table class="celd">
                         <tbody>
                             <tr>
-                                <td class="cost">2</td>
+                                <td class="cost">$2</td>
                             </tr>
 
                             <tr>
-                                <td class="value" data-arrowTo="2,2" colspan="3">10</td>
+                                <td class="value" colspan="3"  data-arrowTo="2,2">1</td>
                             </tr>
                         </tbody>
                     </table>
@@ -81,20 +65,7 @@
                     <table class="celd">
                         <tbody>
                             <tr>
-                                <td class="cost">20</td>
-                            </tr>
-
-                            <tr>
-                                <td class="value" colspan="3"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-                <td>
-                    <table class="celd">
-                        <tbody>
-                            <tr>
-                                <td class="cost">11</td>
+                                <td class="cost">$1</td>
                             </tr>
 
                             <tr>
@@ -104,19 +75,19 @@
                     </table>
                 </td>
                 <td class="offer">
-                    15
+                    6
                 </td>
             </tr>
 
             <tr>
-                <th>
+                <th class="row-index">
                     2
                 </th>
                 <td>
                     <table class="celd">
                         <tbody>
                             <tr>
-                                <td class="cost">12</td>
+                                <td class="cost">$2</td>
                             </tr>
 
                             <tr>
@@ -129,11 +100,11 @@
                     <table class="celd">
                         <tbody>
                             <tr>
-                                <td class="cost">7</td>
+                                <td class="cost">$1</td>
                             </tr>
 
                             <tr>
-                                <td class="value" data-arrowTo="2,3" colspan="3">5</td>
+                                <td class="value" colspan="3" data-arrowTo="2,3">4</td>
                             </tr>
                         </tbody>
                     </table>
@@ -142,42 +113,29 @@
                     <table class="celd">
                         <tbody>
                             <tr>
-                                <td class="cost">9</td>
+                                <td class="cost">$5</td>
                             </tr>
 
                             <tr>
-                                <td class="value" data-arrowTo="2,4" colspan="3">15</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-                <td>
-                    <table class="celd">
-                        <tbody>
-                            <tr>
-                                <td class="cost">20</td>
-                            </tr>
-
-                            <tr>
-                                <td class="value" data-arrowTo="3,4" colspan="3">5</td>
+                                <td class="value" colspan="3" data-arrowTo="3,3">5</td>
                             </tr>
                         </tbody>
                     </table>
                 </td>
                 <td class="offer">
-                    25
+                    9
                 </td>
             </tr>
 
             <tr>
-                <th>
+                <th class="row-index">
                     3
                 </th>
                 <td>
                     <table class="celd">
                         <tbody>
                             <tr>
-                                <td class="cost">4</td>
+                                <td class="cost">$2</td>
                             </tr>
 
                             <tr>
@@ -190,21 +148,7 @@
                     <table class="celd">
                         <tbody>
                             <tr>
-                                <td class="cost">14</td>
-                            </tr>
-
-
-                            <tr>
-                                <td class="value" colspan="3"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-                <td>
-                    <table class="celd">
-                        <tbody>
-                            <tr>
-                                <td class="cost">16</td>
+                                <td class="cost">$4</td>
                             </tr>
 
 
@@ -218,42 +162,39 @@
                     <table class="celd">
                         <tbody>
                             <tr>
-                                <td class="cost">18</td>
+                                <td class="cost">$3</td>
                             </tr>
 
+
                             <tr>
-                                <td class="value" colspan="3">10</td>
+                                <td class="value" colspan="3">5</td>
                             </tr>
                         </tbody>
                     </table>
                 </td>
                 <td class="offer">
-                    10
+                    5
                 </td>
             </tr>
 
             <tr class="demand">
-                <th colspan="2">
+                <th colspan="1">
                     Demanda
                 </th>
                 <td>
                     5
                 </td>
                 <td>
-                    15
+                    5
                 </td>
                 <td>
-                    15
-                </td>
-                <td>
-                    15
+                    10
                 </td>
                 <td class="offer">
                 </td>
             </tr>
         </tbody>
     </table>
-
     <script src="table/arrows.js"></script>
     <script src="table/table.js"></script>
 </body>

@@ -20,6 +20,9 @@
 .row-header {
     height: 0;
 }
+.row-index{
+    text-align: end;
+}
 
 #board {
     position: relative;
