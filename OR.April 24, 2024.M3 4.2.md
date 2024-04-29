@@ -1,15 +1,10 @@
-# Modelo de transporte
-El *modelo de transporte* busca minimizar costes.
-Los modelos de transporte tienen costos y distancias.
 
-En el ejemplo tenemos el costo de transporte de mover una unidad de una planta a otra,
-y la distancia entre las plantas.
+Considere los modelos de transporte que aparecen en la tabla
 
-El modelo de transporte debe estar balanceado, es decir que la oferta debe ser igual a la demanda.
+![Ejercicios](./images/OR.April%2024,%202024.M3%204.2.img%201.png)
 
-La cantidad de variables básicas nos la dará la ecuación $n+m-1$.
+#### a) Siga el método de la esquina Noroeste y Costo mínimos para determinar la solución.
 
-Todas las casillas en donde coloquemos valores resultarán ser una variable básica de la solución óptima que se encuentre.
 
 <iframe
   src="https://adrigondo.github.io/UACH-operations-research/OR.April%2024,%202024.NorthwestCorner.html"
@@ -24,6 +19,8 @@ Llevando a cabo el *método de la Esquina Noroeste* obtenemos la siguiente funci
 
 $\textrm{Min} Z=10(5)+2(10)+7(5)+9(15)+20(5)+18(10)=520$
 
+
+#### b) Siga el método de la esquina Noroeste y Costo mínimos para determinar la solución.
 
 <iframe
   src="https://adrigondo.github.io/UACH-operations-research/OR.April%2024,%202024.MinimalCost.html"
