@@ -59,8 +59,7 @@
 }
 
 .celd .value:not(:empty){
-    
-    background-color: rgb(209, 209, 255);
+    background-color: rgb(176, 226, 243);
     border-radius: 50%;
 }
 

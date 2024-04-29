@@ -51,7 +51,7 @@ const drawArrow = (
     const startOp = Math.cos(Math.atan(Math.abs((startA.y - endA.y) / (startA.x - endA.x))));
     const endOp = Math.sin(Math.atan(Math.abs((startA.y - endA.y) / (startA.x - endA.x))));
     // console.log(startOp, endOp);
-    console.log(source,(startA.y > endA.y ? 1 : -1), r * endOp);
+    // console.log(source,(startA.y > endA.y ? 1 : -1), r * endOp);
     const start = {
         x: startA.x + (startA.x > endA.x ? -1 : 1) * r * startOp,
         y: startA.y - (startA.y > endA.y ? 1 : -1) * r * endOp,
@@ -61,8 +61,8 @@ const drawArrow = (
         y: endA.y + (startA.y > endA.y ? 1 : -1) * r * endOp,
     }
 
-    ctx.fillStyle = 'steelblue';
-    ctx.strokeStyle = 'steelblue';
+    ctx.fillStyle = '#2f8473';
+    ctx.strokeStyle = '#2f8473';
 
     const lineWidth = 1 * dpi;
     // draw line from start to end
