@@ -1,55 +1,19 @@
-var PIXEL_RATIO = (function () {
-    var ctx = document.createElement("canvas").getContext("2d"),
-        dpr = window.devicePixelRatio || 1,
-        bsr = ctx.webkitBackingStorePixelRatio ||
-            ctx.mozBackingStorePixelRatio ||
-            ctx.msBackingStorePixelRatio ||
-            ctx.oBackingStorePixelRatio ||
-            ctx.backingStorePixelRatio || 1;
 
-    return dpr / bsr;
-})();
-
-
-createHiDPICanvas = function (x,y,w, h, ratio) {
-    if (!ratio) { ratio = PIXEL_RATIO; }
-    var can = document.createElement("canvas");
-    can.width = w * ratio;
-    can.height = h * ratio;
-    can.style.left = x+"px";
-    can.style.top = y+"px";
-    can.style.width = w + "px";
-    can.style.height = h + "px";
-    can.getContext("2d").setTransform(ratio, 0, 0, ratio, 0, 0);
-    return can;
-}
-
-//Create canvas with the device resolution.
-var myCanvas = createHiDPICanvas(500, 250);
-
-const drawArrow = (source, target, board) => {
-    var body = document.querySelector("body");
-    var {
-        width: boardWidth,
-        height: boardHeight,
-        x: boardX,
-        y: boardY,
-    } = board.getBoundingClientRect();
-
-    var canvas = createHiDPICanvas(boardX,boardY,boardWidth, boardHeight);
+const drawArrow = (
+    canvas, source, target,
+    {
+        boardX, boardY
+    }
+) => {
     const ctx = canvas.getContext('2d');
-    
-    canvas.classList.add('arrow')
-    body.appendChild(canvas);
-
 
     // console.log(source.getBoundingClientRect(), target.getBoundingClientRect());
-    const {
+    var {
         x: sourceX,
         y: sourceY,
         width: sourceWidth,
         height: sourceHeight } = source.getBoundingClientRect();
-    const {
+    var {
         x: targetX,
         y: targetY,
         width: targetWidth,
@@ -61,6 +25,21 @@ const drawArrow = (source, target, board) => {
     //     targetY + targetHeight / 2,
     // );
 
+    // We need to adjust everything to the dpi because the canvas is adjusted to this dpi.
+    const dpi = window.devicePixelRatio;
+    boardX *= dpi;
+    boardY *= dpi;
+    sourceX *= dpi;
+    sourceY *= dpi;
+    sourceWidth *= dpi;
+    sourceHeight *= dpi;
+    targetX *= dpi;
+    targetY *= dpi;
+    targetWidth *= dpi;
+    targetHeight *= dpi;
+
+    const r = 12*dpi;
+
     const startA = {
         x: sourceX - boardX + sourceWidth / 2,
         y: sourceY - boardY + sourceHeight / 2,
@@ -69,43 +48,47 @@ const drawArrow = (source, target, board) => {
         x: targetX - boardX + targetWidth / 2,
         y: targetY - boardY + targetHeight / 2,
     }
-    const r = 10;
-    const startOp = Math.cos(Math.atan((startA.y - endA.y) / (startA.x - endA.x)));
-    const endOp = Math.sin(Math.atan((startA.y - endA.y) / (startA.x - endA.x)));
+    const startOp = Math.cos(Math.atan(Math.abs((startA.y - endA.y) / (startA.x - endA.x))));
+    const endOp = Math.sin(Math.atan(Math.abs((startA.y - endA.y) / (startA.x - endA.x))));
     // console.log(startOp, endOp);
+    console.log(source,(startA.y > endA.y ? 1 : -1), r * endOp);
     const start = {
         x: startA.x + (startA.x > endA.x ? -1 : 1) * r * startOp,
-        y: startA.y - (startA.y > endA.y ? -1 : 1)*r * endOp,
+        y: startA.y - (startA.y > endA.y ? 1 : -1) * r * endOp,
     }
     const end = {
         x: endA.x - (startA.x > endA.x ? -1 : 1) * r * startOp,
-        y: endA.y + (startA.y > endA.y ? -1 : 1) * r * endOp,
+        y: endA.y + (startA.y > endA.y ? 1 : -1) * r * endOp,
     }
 
     ctx.fillStyle = 'steelblue';
     ctx.strokeStyle = 'steelblue';
 
+    const lineWidth = 1 * dpi;
     // draw line from start to end
     ctx.beginPath();
     ctx.moveTo(start.x, start.y);
     ctx.lineTo(end.x, end.y);
-    ctx.lineWidth = 1.5;
+    ctx.lineWidth = lineWidth;
     ctx.stroke();
 
+    const circleRadius = 1 * dpi;
     // draw circle at beginning of line
     ctx.beginPath();
-    ctx.arc(start.x, start.y, 1, 0, Math.PI * 2, true);
+    ctx.arc(start.x, start.y, circleRadius, 0, Math.PI * 2, true);
     ctx.fill();
 
+    const arrowLength = 4 * dpi;
+    const arrowWidth = 3 * dpi;
     // draw pointer at end of line (needs rotation)
     ctx.beginPath();
     var angle = Math.atan2(end.y - start.y, end.x - start.x);
     ctx.translate(end.x, end.y);
     ctx.rotate(angle);
-    ctx.moveTo(0, 0);
-    ctx.lineTo(-5, -4);
-    ctx.lineTo(-5, 4);
-    ctx.lineTo(0, 0);
+    ctx.moveTo(arrowLength, 0);
+    ctx.lineTo(-arrowLength, -arrowWidth);
+    ctx.lineTo(-arrowLength, arrowWidth);
+    ctx.lineTo(arrowLength, 0);
     ctx.fill();
 
     // reset canvas context

@@ -10,6 +10,8 @@ El modelo de transporte debe estar balanceado, es decir que la oferta debe ser i
 La cantidad de variables básicas nos la dará la ecuación $n+m-1$.
 
 <iframe
-  src="./OR.April 24, 2024.html"
-  style="width:100%; height:500px;"
-></iframe>
+  src="https://github.com/microsoft/vscode/issues/123451"
+  width="500"
+  height="500"
+  >
+</iframe>
