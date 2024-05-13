@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OR | Minimal Cost</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='table/table.css'>
+</head>
+
+
+<body>
+    <!-- table.unmarked>thead>tr>th+th*7>{$}^^^tbody>tr*7>th>{$}^td.celd*7>span.value -->
+    <!-- table.unmarked>thead>tr>th+th*7>{$}^^^tbody>tr*7>th>{$}^td.celd*7>span.value>{$} -->
+
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">5</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd">5</td>
+                <td class="celd">2</td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">3</td>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd">7</td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+                <td class="celd">12</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd"></td>
+                <td class="celd">5</td>
+                <td class="celd">7</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd">3</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd"></td>
+                <td class="celd">2</td>
+                <td class="celd"></td>
+                <td class="celd">3</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd"></td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+                <td class="celd">1</td>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd"></td>
+                <td class="celd"></td>
+                <td class="celd">12</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">-</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="break"></div>
+    
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="highlighted">
+                <th>1</th>
+                <td class="celd highlighted">-</td>
+                <td class="celd">5</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd highlighted">5</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd">5</td>
+                <td class="celd">2</td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd highlighted">3</td>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd">7</td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+                <td class="celd">12</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd highlighted"></td>
+                <td class="celd">5</td>
+                <td class="celd">7</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd">3</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd highlighted"></td>
+                <td class="celd">2</td>
+                <td class="celd"></td>
+                <td class="celd">3</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd highlighted"></td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+                <td class="celd">1</td>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd highlighted"></td>
+                <td class="celd"></td>
+                <td class="celd">12</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">-</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="break"></div>
+    
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd highlighted">5</td>
+                <td class="celd">3</td>
+                <td class="celd">10</td>
+                <td class="celd">7</td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+            </tr>
+            <tr class="highlighted">
+                <th>2</th>
+                <td class="celd">5</td>
+                <td class="celd highlighted">-</td>
+                <td class="celd">1</td>
+                <td class="celd">5</td>
+                <td class="celd">2</td>
+                <td class="celd"></td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">3</td>
+                <td class="celd highlighted">1</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd">12</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">10</td>
+                <td class="celd highlighted">5</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd">3</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">7</td>
+                <td class="celd highlighted">2</td>
+                <td class="celd">3</td>
+                <td class="celd">3</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd"></td>
+                <td class="celd highlighted"></td>
+                <td class="celd"></td>
+                <td class="celd">1</td>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd"></td>
+                <td class="celd highlighted"></td>
+                <td class="celd">12</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">2</td>
+                <td class="celd highlighted">2</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd highlighted">2</td>
+                <td class="celd highlighted">2</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd highlighted">2</td>
+                <td class="celd">2</td>
+                <td class="celd highlighted">2</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd highlighted">2</td>
+                <td class="celd">2</td>
+                <td class="celd highlighted">2</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">-</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="break"></div>
+    
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd">9</td>
+                <td class="celd">6</td>
+                <td class="celd"></td>
+                <td class="celd">15</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd highlighted">1</td>
+                <td class="celd">5</td>
+                <td class="celd">2</td>
+                <td class="celd"></td>
+                <td class="celd">13</td>
+            </tr>
+            <tr class="highlighted">
+                <th>3</th>
+                <td class="celd">3</td>
+                <td class="celd">1</td>
+                <td class="celd highlighted">-</td>
+                <td class="celd">6</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd">12</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">9</td>
+                <td class="celd">5</td>
+                <td class="celd highlighted">6</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd">3</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">6</td>
+                <td class="celd">2</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd">3</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd">15</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd"></td>
+                <td class="celd"></td>
+                <td class="celd highlighted"></td>
+                <td class="celd">1</td>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd"></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">15</td>
+                <td class="celd">13</td>
+                <td class="celd highlighted">12</td>
+                <td class="celd">3</td>
+                <td class="celd">15</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">3</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd highlighted">3</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">3</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd highlighted">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd highlighted">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">3</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">-</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd highlighted">3</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="break"></div>
+    
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">9</td>
+                <td class="celd">6</td>
+                <td class="celd"></td>
+                <td class="celd">12</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd highlighted">5</td>
+                <td class="celd">2</td>
+                <td class="celd"></td>
+                <td class="celd">8</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">3</td>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd highlighted">6</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd">9</td>
+            </tr>
+            <tr class="highlighted">
+                <th>4</th>
+                <td class="celd">9</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">-</td>
+                <td class="celd">3</td>
+                <td class="celd"></td>
+                <td class="celd">3</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">6</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd">6</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">10</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+                <td class="celd highlighted">1</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">12</td>
+                <td class="celd">8</td>
+                <td class="celd">9</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd">6</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">3</td>
+                <td class="celd">3</td>
+                <td class="celd">3</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">4</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">3</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">4</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">4</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">4</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd highlighted">4</td>
+                <td class="celd highlighted">4</td>
+                <td class="celd highlighted">4</td>
+                <td class="celd">4</td>
+                <td class="celd highlighted">4</td>
+                <td class="celd">-</td>
+                <td class="celd highlighted">4</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd highlighted">4</td>
+                <td class="celd highlighted">4</td>
+                <td class="celd highlighted">4</td>
+                <td class="celd">4</td>
+                <td class="celd highlighted">4</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="break"></div>
+    
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+                <td class="celd">3</td>
+                <td class="celd">9</td>
+                <td class="celd highlighted">6</td>
+                <td class="celd">7</td>
+                <td class="celd">12</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd">5</td>
+                <td class="celd highlighted">2</td>
+                <td class="celd">3</td>
+                <td class="celd">8</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">3</td>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd">4</td>
+                <td class="celd">9</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">9</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd">4</td>
+                <td class="celd">3</td>
+            </tr>
+            <tr class="highlighted">
+                <th>5</th>
+                <td class="celd">6</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">-</td>
+                <td class="celd">1</td>
+                <td class="celd">6</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">10</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+                <td class="celd">1</td>
+                <td class="celd highlighted">4</td>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">12</td>
+                <td class="celd">8</td>
+                <td class="celd">9</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">6</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">3</td>
+                <td class="celd">3</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">5</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">3</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">5</td>
+                <td class="celd highlighted">5</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd highlighted">5</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd highlighted">5</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="break"></div>
+    
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+                <td class="celd">3</td>
+                <td class="celd">8</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">7</td>
+                <td class="celd">11</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd">4</td>
+                <td class="celd">2</td>
+                <td class="celd highlighted">3</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">3</td>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">4</td>
+                <td class="celd">8</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">9</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">4</td>
+                <td class="celd">3</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">6</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd highlighted">1</td>
+                <td class="celd">5</td>
+            </tr>
+            <tr class="highlighted">
+                <th>6</th>
+                <td class="celd">10</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+                <td class="celd">1</td>
+                <td class="celd">4</td>
+                <td class="celd highlighted">-</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">12</td>
+                <td class="celd">8</td>
+                <td class="celd">9</td>
+                <td class="celd">3</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">4</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">6</td>
+                <td class="celd">3</td>
+                <td class="celd">5</td>
+                <td class="celd highlighted">6</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">3</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">6</td>
+                <td class="celd">5</td>
+                <td class="celd">5</td>
+                <td class="celd highlighted">6</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd highlighted">6</td>
+                <td class="celd">2</td>
+                <td class="celd">5</td>
+                <td class="celd highlighted">6</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">5</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd highlighted">6</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd highlighted">6</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="break"></div>
+    
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+                <td class="celd">3</td>
+                <td class="celd">8</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+                <td class="celd highlighted">11</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd">4</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd highlighted">7</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">3</td>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd highlighted">8</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">9</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd highlighted">3</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">6</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd highlighted">5</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">10</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+                <td class="celd">1</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd highlighted">4</td>
+            </tr>
+            <tr class="highlighted">
+                <th>7</th>
+                <td class="celd">12</td>
+                <td class="celd">8</td>
+                <td class="celd">9</td>
+                <td class="celd">3</td>
+                <td class="celd">6</td>
+                <td class="celd">4</td>
+                <td class="celd highlighted">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">3</td>
+                <td class="celd">6</td>
+                <td class="celd">3</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">3</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">6</td>
+                <td class="celd">5</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd">2</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">5</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd">6</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="break"></div>
+    
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+                <td class="celd">3</td>
+                <td class="celd">8</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+                <td class="celd">11</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd">4</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">3</td>
+                <td class="celd">1</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">8</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">9</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">4</td>
+                <td class="celd">3</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">6</td>
+                <td class="celd">2</td>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">1</td>
+                <td class="celd">5</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">10</td>
+                <td class="celd">6</td>
+                <td class="celd">7</td>
+                <td class="celd">1</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">12</td>
+                <td class="celd">8</td>
+                <td class="celd">9</td>
+                <td class="celd">3</td>
+                <td class="celd">6</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="unmarked box">
+        <thead>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">3</td>
+                <td class="celd">6</td>
+                <td class="celd">3</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="celd">3</td>
+                <td class="celd">-</td>
+                <td class="celd">3</td>
+                <td class="celd">6</td>
+                <td class="celd">5</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="celd">1</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd">2</td>
+                <td class="celd">5</td>
+                <td class="celd">6</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">-</td>
+                <td class="celd">5</td>
+                <td class="celd">5</td>
+                <td class="celd">7</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="celd">3</td>
+                <td class="celd">2</td>
+                <td class="celd">2</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+                <td class="celd">6</td>
+                <td class="celd">6</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">-</td>
+                <td class="celd">4</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">4</td>
+                <td class="celd">6</td>
+                <td class="celd">-</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="table/arrows.js"></script>
+    <script src="table/table.js"></script>
+</body>
+
+</html>
