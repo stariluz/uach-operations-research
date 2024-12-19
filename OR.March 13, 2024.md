@@ -1,4 +1,4 @@
-
+****
 > La **holgura** es el recurso disponible no utilizado. Se encuentra cuando el signo es $\leq$. Se representa con una $s$. En las ecuaciones se suma.
 >
 > El **superávit** es el recurso excedente utilizado mayor que el mínimo requerido. Se encuentra cuando el signo es $\geq$. Se representa con una $S$. En las ecuaciones se resta.

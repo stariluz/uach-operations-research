@@ -29,23 +29,23 @@ Jacobo fabrica 2 productos en 2 máquinas, una unidad del producto 1 requiere 2h
 
 5. Puntos esquina
 
-    |$PE$ |$x1, x2$ | $Z = 30x_1 + 20x_2$|
-    |-|-|-|
-    | $A$ | $0,0$ | $Z=0$ |
-    | $B$ | $0, 2.66$ | $Z=53.32$ |
-    | $C$ | $3.2, 1.6$ | $Z=128$ |
-    | $D$ | $4,0$ | $Z=120$ |
+    | $PE$ | $x1, x2$   | $Z = 30x_1 + 20x_2$ |
+    | ---- | ---------- | ------------------- |
+    | $A$  | $0,0$      | $Z=0$               |
+    | $B$  | $0, 2.66$  | $Z=53.32$           |
+    | $C$  | $3.2, 1.6$ | $Z=128$             |
+    | $D$  | $4,0$      | $Z=120$             |
 
 6. Mover restricción 1 para obtener una $Z_b$
 
     $\textrm{ Disp. Maquina }_1 \to \textrm{ R }_1 : 2x_1 + x_2 \leq 10$
         
-    |$PE$ |$x1, x2$ | $Z = 30x_1 + 20x_2$|
-    |-|-|-|
-    | $A$ | $0,0$ | $Z=0$ |
-    | $B$ | $0, 2.66$ | $Z=53.32$ |
-    | $E$ | $4.4, 1.2$ | $Z=156$ |
-    | $F$ | $5,0$ | $Z=150$ |
+    | $PE$ | $x1, x2$   | $Z = 30x_1 + 20x_2$ |
+    | ---- | ---------- | ------------------- |
+    | $A$  | $0,0$      | $Z=0$               |
+    | $B$  | $0, 2.66$  | $Z=53.32$           |
+    | $E$  | $4.4, 1.2$ | $Z=156$             |
+    | $F$  | $5,0$      | $Z=150$             |
 
     6.1. Precio Dual
 
@@ -61,12 +61,12 @@ Jacobo fabrica 2 productos en 2 máquinas, una unidad del producto 1 requiere 2h
 
     $\textrm{ Disp. Maquina }_2 \to \textrm{ R }_2 : 1x_1 + 3x_2 \leq 10$
         
-    |$PE$ |$x1, x2$ | $Z = 30x_1 + 20x_2$|
-    |-|-|-|
-    | $A$ | $0,0$ | $Z=0$ |
-    | $G$ | $0, 3.33$ | $Z=66.6$ |
-    | $H$ | $2.8, 2.4$ | $Z=132$ |
-    | $D$ | $4,0$ | $Z=120$ |
+    | $PE$ | $x1, x2$   | $Z = 30x_1 + 20x_2$ |
+    | ---- | ---------- | ------------------- |
+    | $A$  | $0,0$      | $Z=0$               |
+    | $G$  | $0, 3.33$  | $Z=66.6$            |
+    | $H$  | $2.8, 2.4$ | $Z=132$             |
+    | $D$  | $4,0$      | $Z=120$             |
 
     7.1. Precio Dual
 
@@ -75,9 +75,9 @@ Jacobo fabrica 2 productos en 2 máquinas, una unidad del producto 1 requiere 2h
     Implica que sumar o quitar 1 unidad en la $\textrm{ Disp. Maquina }_2$ afectará en $2$ al valor de $Z$.
 
     7.2 Intervalo de factibilidad
-    | | | |
-    |-|-|-|
-    | $\textrm{Punto D} \to (4,0)$ | $1x_1 + 3x_2 \to 1(4) + 3(0)$ | $4$ |
+    |                              |                               |      |
+    | ---------------------------- | ----------------------------- | ---- |
+    | $\textrm{Punto D} \to (4,0)$ | $1x_1 + 3x_2 \to 1(4) + 3(0)$ | $4$  |
     | $\textrm{Punto I} \to (0,8)$ | $1x_1 + 3x_2 \to 1(0) + 3(8)$ | $24$ |
 
     $4 \leq \textrm{ Disp. Maquina }_2 \leq 24$
@@ -106,24 +106,24 @@ Obtener precio dual e intervalo de factibilidad de materia prima 1 y 2 del ejerc
     ![alt text](images/image-2.png)
 
 5. Puntos esquina
-    |$PE$ |$x1, x2$ | $Z = 5x_1 + 4x_2$|
-    |-|-|-|
-    | $A$ | $0,0$ | $Z=0$ |
-    | $B$ | $0,3$ | $Z=12$ |
-    | $C$ | $3,1.5$ | $Z=21$ |
-    | $D$ | $4,0$ | $Z=20$ |
+    | $PE$ | $x1, x2$ | $Z = 5x_1 + 4x_2$ |
+    | ---- | -------- | ----------------- |
+    | $A$  | $0,0$    | $Z=0$             |
+    | $B$  | $0,3$    | $Z=12$            |
+    | $C$  | $3,1.5$  | $Z=21$            |
+    | $D$  | $4,0$    | $Z=20$            |
 
 
 6. Mover restricción 1 para obtener una $Z_b$
 
     $\textrm{ Disp. Materia P. }_1 \to \textrm{ R }_1 : 6x_1 + 4x_2 \leq 28$
    
-    |$PE$ |$x1, x2$ | $Z = 5x_1 + 4x_2$|
-    |-|-|-|
-    | $A$ | $0,0$ | $Z=0$ |
-    | $B$ | $0,3$ | $Z=9$ |
-    | $E$ | $4,1$ | $Z=24$ |
-    | $F$ | $4.66,0$ | $Z=23.3$ |
+    | $PE$ | $x1, x2$ | $Z = 5x_1 + 4x_2$ |
+    | ---- | -------- | ----------------- |
+    | $A$  | $0,0$    | $Z=0$             |
+    | $B$  | $0,3$    | $Z=9$             |
+    | $E$  | $4,1$    | $Z=24$            |
+    | $F$  | $4.66,0$ | $Z=23.3$          |
 
     6.1. Precio Dual
 
@@ -133,8 +133,8 @@ Obtener precio dual e intervalo de factibilidad de materia prima 1 y 2 del ejerc
 
     6.2. Intervalo de factibilidad
 
-    | | |
-    |-|-|-|
+    |                              |                               |
+    | ---------------------------- | ----------------------------- | ---- |
     | $\textrm{Punto B} \to (0,3)$ | $6x_1 + 4x_2 \to 6(0) + 4(3)$ | $12$ |
     | $\textrm{Punto J} \to (6,0)$ | $6x_1 + 4x_2 \to 6(6) + 4(0)$ | $36$ |
 
@@ -144,12 +144,12 @@ Obtener precio dual e intervalo de factibilidad de materia prima 1 y 2 del ejerc
 
     $\textrm{ Disp. Materia P. }_2 \to \textrm{ R }_2 : x_1 + 2x_2 \leq 6$
 
-    |$PE$ |$x1, x2$ | $Z = 5x_1 + 4x_2$|
-    |-|-|-|
-    | $A$ | $0,0$ | $Z=0$ |
-    | $G$ | $0,5$ | $Z=20$ |
-    | $H$ | $1,4.5$ | $Z=23$ |
-    | $D$ | $4,0$ | $Z=20$ |
+    | $PE$ | $x1, x2$ | $Z = 5x_1 + 4x_2$ |
+    | ---- | -------- | ----------------- |
+    | $A$  | $0,0$    | $Z=0$             |
+    | $G$  | $0,5$    | $Z=20$            |
+    | $H$  | $1,4.5$  | $Z=23$            |
+    | $D$  | $4,0$    | $Z=20$            |
 
     7.1. Precio Dual
 
@@ -159,9 +159,9 @@ Obtener precio dual e intervalo de factibilidad de materia prima 1 y 2 del ejerc
 
     7.2 Intervalo de factibilidad
     
-    | | | |
-    |-|-|-|
-    | $\textrm{Punto D} \to (4,0)$ | $ x_1 + 2x_2 \to 1(4) + 2(0)$ | $4$ |
+    |                              |                               |      |
+    | ---------------------------- | ----------------------------- | ---- |
+    | $\textrm{Punto D} \to (4,0)$ | $ x_1 + 2x_2 \to 1(4) + 2(0)$ | $4$  |
     | $\textrm{Punto I} \to (0,6)$ | $ x_1 + 2x_2 \to 1(0) + 2(6)$ | $12$ |
 
     $4 \leq \textrm{ Disp. Materia P. }_2 \leq 12$

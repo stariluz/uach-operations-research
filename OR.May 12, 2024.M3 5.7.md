@@ -26,7 +26,7 @@ Aplique el algoritmo de Floyd a la red de la figura. Los arcos (7,6) y (6,4) son
 ### $D_7$ y $S_7$
 ![Ejercicio del algoritmo de Floyd](./images/OR.May%2012,%202024.M3%205.7.img%209.png)
 
-Dado que ya concluímos el cíclo, estas son nuestras matrices resultantes:
+Dado que ya concluímos el cíclo, estas son nuestras matrices resultantes $D_F$ y $S_F$:
 ![Ejercicio del algoritmo de Floyd](./images/OR.May%2012,%202024.M3%205.7.img%2010.png)
 
 Determine la ruta más corta entre los siguientes pares de nodos:
@@ -43,9 +43,9 @@ Determine la ruta más corta entre los siguientes pares de nodos:
 
 2. Del nodo 7 al nodo 1.
 
-   $7\to4\to3\to1$
+   $7\to6\to5\to3\to1$
     
-   $7\to4\to2\to3\to1$
+   $7\to6\to5\to2\to3\to1$
     
 
 3. Del nodo 6 al nodo 7.
